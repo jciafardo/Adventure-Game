@@ -30,8 +30,9 @@ public class Game {
     public void beginGame() {
 
         Player player = new Player();
+        Robot robot = new Robot();
 
-        while(player.getHealth() > 0) {
+        while(player.getHealth() > 0 && robot.getHealth() > 0) {
 
             System.out.println(INTRO);
 
@@ -41,7 +42,7 @@ public class Game {
             } else if (selectedOption.equals(OPTION_BLUE)) {
                 blueRoom.onEnterRoom(player);
             } else if (selectedOption.equals(OPTION_GREEN)) {
-                greenRoom.onEnterRoom(player);
+                greenRoom.onEnterRoom(player, robot);
             } else {
                 System.out.println("Goodbye!");
                 break;
