@@ -31,21 +31,22 @@ public class Game {
 
         Player player = new Player();
 
-        while(true) {
+        while(player.getHealth() > 0) {
 
             System.out.println(INTRO);
 
             String selectedOption = MenuDisplay.prompt(OPTIONS);
-            if(selectedOption.equals(OPTION_RED)){
+            if (selectedOption.equals(OPTION_RED)) {
                 redRoom.onEnterRoom(player);
-            }else if(selectedOption.equals(OPTION_BLUE)){
+            } else if (selectedOption.equals(OPTION_BLUE)) {
                 blueRoom.onEnterRoom(player);
-            }else if(selectedOption.equals(OPTION_GREEN)){
+            } else if (selectedOption.equals(OPTION_GREEN)) {
                 greenRoom.onEnterRoom(player);
             } else {
                 System.out.println("Goodbye!");
                 break;
             }
+
 
 
         }

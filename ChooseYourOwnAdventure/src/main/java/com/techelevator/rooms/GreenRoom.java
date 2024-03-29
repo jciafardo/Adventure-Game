@@ -13,22 +13,19 @@ public class GreenRoom {
 
     public void onEnterRoom(Player player) {
 
-        while(true) {
-
+        while(player.getHealth() > 0) {
             System.out.println(INTRO);
 
             String selectedOption = MenuDisplay.prompt(OPTIONS);
-            if(selectedOption.equals(OPTION_FIGHT)){
+            if (selectedOption.equals(OPTION_FIGHT)) {
                 onFightRobot(player);
-            }else if(selectedOption.equals(OPTION_LEAVE)){
+            } else if (selectedOption.equals(OPTION_LEAVE)) {
                 System.out.println("You exit the room");
                 break;
             }
-
-
         }
-
     }
+
 
     private void onFightRobot(Player player) {
 
