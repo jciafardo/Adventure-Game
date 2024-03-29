@@ -41,20 +41,16 @@ public class PinkRoom {
             }
 
 
-
-
         }
-
-
-
-
 
     }
 
-    private void restoreHealth(Player player) {
+    private void restoreHealth(Player player) {System.out.println(" Congratulations! Your health is at 100");
     }
 
     private void drinkPotion(Player player) {
+        System.out.println("Congratulations, you have earned a master key!");
+
     }
 
 
